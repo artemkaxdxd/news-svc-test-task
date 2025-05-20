@@ -1,0 +1,15 @@
+{{ define "item" }}
+<li id="post-{{ .ID }}" class="post-container">
+  <h3>{{ .Title }}</h3>
+  <p>{{ .Content }}</p>
+  <button hx-get="/posts/{{ .ID }}" hx-target="#post-{{ .ID }}" hx-swap="outerHTML">
+    View
+  </button>
+  <button hx-get="/posts/{{ .ID }}/edit" hx-target="#create-form" hx-swap="innerHTML">
+    Edit
+  </button>
+  <button hx-delete="/posts/{{ .ID }}" hx-target="#post-{{ .ID }}" hx-swap="delete">
+    Delete
+  </button>
+</li>
+{{ end }}

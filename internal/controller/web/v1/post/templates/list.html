@@ -1,0 +1,9 @@
+{{ define "list" }}
+<ul>
+  {{- range .Posts }}
+  {{ template "item" . }}
+  {{- else }}
+  <li>No posts found.</li>
+  {{- end }}
+</ul>
+{{ end }}

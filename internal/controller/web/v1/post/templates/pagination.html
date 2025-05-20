@@ -1,0 +1,15 @@
+{{ define "pagination" }}
+<nav id="posts-pagination" hx-swap-oob="true" aria-label="Page navigation">
+  {{ if gt .Page 1 }}
+  <button hx-get="/posts?page={{ sub .Page 1 }}&amp;limit={{ .Limit }}&amp;q={{ .Search }}" hx-target="#posts-list"
+    hx-swap="innerHTML" hx-push-url="true">Prev</button>
+  {{ end }}
+
+  Page {{ .Page }} of {{ .TotalPages }}
+
+  {{ if lt .Page .TotalPages }}
+  <button hx-get="/posts?page={{ add .Page 1 }}&amp;limit={{ .Limit }}&amp;q={{ .Search }}" hx-target="#posts-list"
+    hx-swap="innerHTML" hx-push-url="true">Next</button>
+  {{ end }}
+</nav>
+{{ end }}

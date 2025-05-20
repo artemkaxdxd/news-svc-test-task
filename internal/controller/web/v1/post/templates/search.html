@@ -1,0 +1,6 @@
+{{ define "search" }}
+<form hx-get="/posts" hx-target="#posts-list" hx-push-url="true">
+  <input type="text" name="q" value="{{ .Search }}" placeholder="Search…">
+  <button type="submit">🔍</button>
+</form>
+{{ end }}

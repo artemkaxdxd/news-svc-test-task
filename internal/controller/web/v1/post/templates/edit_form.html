@@ -1,0 +1,14 @@
+{{ define "edit_form" }}
+<div>
+  <h2>Update Post</h2>
+  <form id="post-form" hx-patch="/posts/{{ .ID }}" hx-target="#post-{{ .ID }}" hx-swap="outerHTML">
+    <input type="text" name="title" value="{{ .Title }}" placeholder="Title" required>
+    <textarea name="content" placeholder="Content" required>{{ .Content }}</textarea>
+    <button type="submit">Update Post</button>
+    <button type="button" hx-get="/posts/create" hx-target="#create-form" hx-swap="innerHTML">Cancel</button>
+    {{ if .Error }}
+    <div class="error">{{ .Error }}</div>
+    {{ end }}
+  </form>
+</div>
+{{ end }}

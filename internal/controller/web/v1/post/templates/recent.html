@@ -1,0 +1,9 @@
+{{ define "recent" }}
+<ul>
+  {{- range .Recent }}
+  <li>{{ .Title }}</li>
+  {{- else }}
+  <li>No recent posts.</li>
+  {{- end }}
+</ul>
+{{ end }}

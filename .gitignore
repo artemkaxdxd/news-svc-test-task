@@ -1,0 +1,19 @@
+# Binaries
+/bin/
+/bin-news-svc-test-task
+
+# Build artifacts
+dist/
+/vendor/
+
+# OS files
+.DS_Store
+
+# IDE/editor
+.vscode/
+
+# Env files
+.env
+
+# Logs
+*.log
