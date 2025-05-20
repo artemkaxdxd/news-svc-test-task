@@ -3,10 +3,10 @@
 A simple blogging/news service built in Go, using MongoDB and server‑side HTMX rendering templates. It covers:
 
 * Clean application layering (handler → service → repository)
-* MongoDB integration with BSON marshalling
-* Unit and integration tests (including Docker‑backed MongoDB)
-* Docker & Docker Compose for easy local development
-* Makefile for common tasks (build, test, lint, run, compose)
+* MongoDB integration
+* Unit and integration tests
+* Docker & Docker Compose
+* Makefile for common tasks (build, test, run, compose)
 
 ---
 
